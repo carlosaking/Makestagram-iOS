@@ -14,7 +14,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
-    
+    let refreshControl = UIRefreshControl()
+
     let timestampFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
@@ -27,12 +28,7 @@ class HomeVC: UIViewController {
 
         // Do any additional setup after loading the view.
         configureTableView()
-        
-        UserService.posts(for: User.current) { (posts) in
-            
-            self.posts = posts
-            self.tableView.reloadData()
-        }
+        reloadTimeline()
     
     }
     
@@ -41,6 +37,22 @@ class HomeVC: UIViewController {
         tableView.tableFooterView = UIView()
         // remove separators from cells
         tableView.separatorStyle = .none
+        
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    func reloadTimeline() {
+        UserService.timeline { (posts) in
+            self.posts = posts
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            
+            self.tableView.reloadData()
+        }
     }
 
     /*
@@ -86,13 +98,19 @@ extension HomeVC: UITableViewDataSource {
             
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell") as! PostActionCell
-            cell.timeAgoLbl.text = timestampFormatter.string(from: post.creationDate)
-            
+            cell.delegate = self
+            configureCell(cell, with: post)
             return cell
             
         default:
             fatalError("Error: unexpected indexPath.")
         }
+    }
+    
+    func configureCell(_ cell: PostActionCell, with post: Post) {
+        cell.timeAgoLbl.text = timestampFormatter.string(from: post.creationDate)
+        cell.likeBtn.isSelected = post.isLiked
+        cell.likeCountLbl.text = "\(post.likeCount) likes"
     }
 }
 
@@ -118,3 +136,38 @@ extension HomeVC: UITableViewDelegate {
         }
     }
 }
+
+
+// MARK: - PostActionCellDelegate
+
+extension HomeVC: PostActionCellDelegate {
+    func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell) {
+
+        guard let indexPath = tableView.indexPath(for: cell)
+            else { return }
+        
+        likeButton.isUserInteractionEnabled = false
+
+        let post = posts[indexPath.section]
+        
+        LikeService.setIsLiked(!post.isLiked, for: post) { (success) in
+
+            defer {
+                likeButton.isUserInteractionEnabled = true
+            }
+            
+            guard success else { return }
+            
+            post.likeCount += !post.isLiked ? 1 : -1
+            post.isLiked = !post.isLiked
+            
+            guard let cell = self.tableView.cellForRow(at: indexPath) as? PostActionCell
+                else { return }
+            
+            DispatchQueue.main.async {
+                self.configureCell(cell, with: post)
+            }
+        }
+    }
+}
+

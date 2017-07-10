@@ -12,6 +12,9 @@
 		072FAF961F0D4125008154B2 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FAF951F0D4125008154B2 /* Storyboard+Utility.swift */; };
 		072FAF981F0D5B71008154B2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FAF971F0D5B71008154B2 /* HomeVC.swift */; };
 		072FAF9A1F0D5B94008154B2 /* FindFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072FAF991F0D5B94008154B2 /* FindFriendsVC.swift */; };
+		076DD5691F13C1900026075F /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DD5681F13C1900026075F /* FollowService.swift */; };
+		076DD56C1F13CE770026075F /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076DD56A1F13CE770026075F /* FindFriends.storyboard */; };
+		076DD56E1F13CF830026075F /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DD56D1F13CF830026075F /* FindFriendsCell.swift */; };
 		076E04CA1F0EBAB300F8FFE8 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E04C91F0EBAB300F8FFE8 /* StorageService.swift */; };
 		076E04CC1F0EC5CB00F8FFE8 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E04CB1F0EC5CB00F8FFE8 /* PostService.swift */; };
 		076E04CE1F0EC74500F8FFE8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E04CD1F0EC74500F8FFE8 /* Post.swift */; };
@@ -27,6 +30,7 @@
 		07DE276E1F0FDA0D009B3F17 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE276D1F0FDA0D009B3F17 /* PostImageCell.swift */; };
 		07DE27701F0FDE5E009B3F17 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE276F1F0FDE5E009B3F17 /* PostHeaderCell.swift */; };
 		07DE27721F0FE10F009B3F17 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE27711F0FE10F009B3F17 /* PostActionCell.swift */; };
+		07DE27741F101D25009B3F17 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE27731F101D25009B3F17 /* LikeService.swift */; };
 		07E342FA1F096268001A6863 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07E342F91F096268001A6863 /* GoogleService-Info.plist */; };
 		07E343041F0A77DF001A6863 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E343031F0A77DF001A6863 /* Login.storyboard */; };
 		07E343061F0A7927001A6863 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E343051F0A7927001A6863 /* LoginVC.swift */; };
@@ -41,6 +45,9 @@
 		072FAF951F0D4125008154B2 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		072FAF971F0D5B71008154B2 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		072FAF991F0D5B94008154B2 /* FindFriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendsVC.swift; sourceTree = "<group>"; };
+		076DD5681F13C1900026075F /* FollowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
+		076DD56B1F13CE770026075F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FindFriends.storyboard; sourceTree = "<group>"; };
+		076DD56D1F13CF830026075F /* FindFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendsCell.swift; sourceTree = "<group>"; };
 		076E04C91F0EBAB300F8FFE8 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		076E04CB1F0EC5CB00F8FFE8 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		076E04CD1F0EC74500F8FFE8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		07DE276D1F0FDA0D009B3F17 /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
 		07DE276F1F0FDE5E009B3F17 /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
 		07DE27711F0FE10F009B3F17 /* PostActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
+		07DE27731F101D25009B3F17 /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		07E342F91F096268001A6863 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07E343031F0A77DF001A6863 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		07E343051F0A7927001A6863 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 				07DE276D1F0FDA0D009B3F17 /* PostImageCell.swift */,
 				07DE276F1F0FDE5E009B3F17 /* PostHeaderCell.swift */,
 				07DE27711F0FE10F009B3F17 /* PostActionCell.swift */,
+				076DD56D1F13CF830026075F /* FindFriendsCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -170,6 +179,8 @@
 				072FAF911F0D1C1E008154B2 /* UserService.swift */,
 				076E04C91F0EBAB300F8FFE8 /* StorageService.swift */,
 				076E04CB1F0EC5CB00F8FFE8 /* PostService.swift */,
+				07DE27731F101D25009B3F17 /* LikeService.swift */,
+				076DD5681F13C1900026075F /* FollowService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				07BE65DD1F06E95D00A50B73 /* Main.storyboard */,
+				076DD56A1F13CE770026075F /* FindFriends.storyboard */,
 				07DE276A1F0FCBC8009B3F17 /* Home.storyboard */,
 				07E343031F0A77DF001A6863 /* Login.storyboard */,
 			);
@@ -278,6 +290,7 @@
 				07BE65E41F06E95D00A50B73 /* LaunchScreen.storyboard in Resources */,
 				07BE65E11F06E95D00A50B73 /* Assets.xcassets in Resources */,
 				07BE65DF1F06E95D00A50B73 /* Main.storyboard in Resources */,
+				076DD56C1F13CE770026075F /* FindFriends.storyboard in Resources */,
 				07DE276C1F0FCBC8009B3F17 /* Home.storyboard in Resources */,
 				07E343041F0A77DF001A6863 /* Login.storyboard in Resources */,
 				07E342FA1F096268001A6863 /* GoogleService-Info.plist in Resources */,
@@ -339,14 +352,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076DD5691F13C1900026075F /* FollowService.swift in Sources */,
 				078568C31F0ACCEE0054D7A2 /* CreateUsernameVC.swift in Sources */,
 				076E04CA1F0EBAB300F8FFE8 /* StorageService.swift in Sources */,
 				072FAF981F0D5B71008154B2 /* HomeVC.swift in Sources */,
 				078568C11F0AC6830054D7A2 /* User.swift in Sources */,
 				072FAF921F0D1C1E008154B2 /* UserService.swift in Sources */,
 				07DE27721F0FE10F009B3F17 /* PostActionCell.swift in Sources */,
+				07DE27741F101D25009B3F17 /* LikeService.swift in Sources */,
 				076E04CE1F0EC74500F8FFE8 /* Post.swift in Sources */,
 				07DE276E1F0FDA0D009B3F17 /* PostImageCell.swift in Sources */,
+				076DD56E1F13CF830026075F /* FindFriendsCell.swift in Sources */,
 				07DE27671F0FC780009B3F17 /* UIImage+Size.swift in Sources */,
 				072FAF961F0D4125008154B2 /* Storyboard+Utility.swift in Sources */,
 				07EE54F91F0E889500A59057 /* MGPhotoHelper.swift in Sources */,
@@ -364,6 +380,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		076DD56A1F13CE770026075F /* FindFriends.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076DD56B1F13CE770026075F /* Base */,
+			);
+			name = FindFriends.storyboard;
+			sourceTree = "<group>";
+		};
 		07BE65DD1F06E95D00A50B73 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -488,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 53E9923A4E87EDEDDEEC2971 /* Pods-Makestagram.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TPRZ8PEQMQ;
 				INFOPLIST_FILE = Makestagram/Info.plist;
@@ -502,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF14B8465EC382BC97BB1422 /* Pods-Makestagram.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TPRZ8PEQMQ;
 				INFOPLIST_FILE = Makestagram/Info.plist;
